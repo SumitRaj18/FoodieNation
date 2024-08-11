@@ -6,14 +6,17 @@
     color: white;
 }
 body {
+  width: 100%;
   overflow-x: hidden;
   overflow-x: clip !important;
 }
-
+.home:hover{
+  
+  border-bottom: #fff;
+}
 .btn1 {
-    height: 50%px;
+    height: 35px;
     width: 50%;
-    margin-bottom: 50px;
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
@@ -271,15 +274,9 @@ form .links a:nth-child(2)
     width: 120vh;
     height: 150vh;
   }
-}
-@media only screen and (min-width:100px) {
-  body{
-    overflow-x: hidden;
-    overflow-x: clip !important;
-   
-  }
   
 }
+
 /* Media Query for Phones */
 @media only screen and (max-width: 500px) {
 
@@ -287,13 +284,9 @@ form .links a:nth-child(2)
     width: 0vh;
     height: 0vh;
   }
-  body {
-    font-size: 14px; /* Adjust the font size for smaller screens */
-  }
+ 
 
-  .container {
-    width: 100%; /* Adjust the container width for full width on small screens */
-  }
+ 
 
   .field input,
   .links a,
@@ -308,4 +301,92 @@ form .links a:nth-child(2)
 .links{
   color: #00d5ff;
 
+}
+@media only screen and (max-width:430px) {
+ 
+html,body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+  .main-nav{
+    width: 100%;
+  }
+ 
+ .minni{
+  height: 225px;
+  width:2rem ;
+  
+ }
+ .ball{
+  height: 20px;
+ }
+ .card-title{
+  font-size: 10px;
+ }
+ .numbers{
+  height: 20px;
+  width: 45px;
+  font-size: 10px;
+ }
+ .numberss{
+  height: 20px;
+  width: 30px;
+  font-size: 10px;
+ }
+.pricing2{
+  font-size: 5px ;
+}
+ img{
+  height: 10px;
+ }
+ .btn1{
+  height:20px ;
+  width: 80%;
+  font-size: smaller;
+  margin-bottom:30px;
+  font-weight: 600;
+ }
+ .tawa{
+  width: 35%;
+ }
+  .card{
+    max-height: 50px ;
+    width: 1rem;
+  }
+  .card-img-top{
+    height: 7px ;
+    object-fit: fill;
+  }
+  .card-f{
+    height: 100px;
+  }
+  
+  .quantity{
+    max-height:6% ;
+  }
+  .q-sel{
+    margin-top: 1rem;
+  }
+  .price-sel{
+    margin-top: 1rem;
+  }
+  .button-add{
+    height: 40px;
+    width: 100%;
+    
+  }
+  .table{
+    width: 425px;
+  }
+  .cart{
+    width: 425px;
+  }
+  .price{
+    margin-left: 10px;
+  }
+  
 }

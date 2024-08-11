@@ -46,8 +46,8 @@ export default function Cart() {
       {console.log(data)}
       <div className='containerCart m-auto mt-5 table-responsive  table-responsive-sm table-responsive-md' >
         <table className='table table-hover '>
-          <thead className=' text-success fs-4'>
-            <tr>
+          <thead className='cart text-success fs-4'>
+            <tr style={{fontSize:'20px'}}>
               <th scope='col' >#</th>
               <th scope='col' >Name</th>
 
@@ -72,7 +72,7 @@ export default function Cart() {
             ))}
           </tbody>
         </table>
-        <div><h1 className='fs-2 ' style={{color:'white'}}>Total Price: {totalPrice}/-</h1></div>
+        <div><h1 className='price fs-2 ' style={{color:'white'}}>Total Price: {totalPrice}/-</h1></div>
         <div className='d-flex justify-content-center mt-2' style={{width:"250px"}}>
           <button className='btn1 ' onClick={handleCheckOut}  > Check Out </button>
         </div>

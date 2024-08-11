@@ -9,8 +9,11 @@ const MODAL_STYLES = {
   transform: 'translate(-50%, -50%)',
   zIndex: 1000,
   height: '90%',
-  width: '90%',
+  width: '100%',
+  
 }
+  
+
 
 const OVERLAY_STYLES = {
   position: 'fixed',

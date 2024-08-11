@@ -37,7 +37,7 @@ export default function Cards(props) {
   const [qty, setQty] = useState(1)
   const [size, setSize] = useState("")
 
- let finalPrice = qty * parseInt(options[size]);
+ let finalPrice =qty * parseInt(options[size]);
   useEffect(() => {
     setSize(priceRef.current.value)
   }, [])
@@ -45,33 +45,32 @@ export default function Cards(props) {
    
    
         
-      <div className="card" style={{width: "18rem",maxHeight:"375px",backgroundColor:"black",color:"white",borderColor:"white"} }>
-  <img src={props.imgSrc} style={{height:"150px",objectFit:"fill"}} className="card-img-top" alt="..."/>
-   <div>
-  <div className="card-body"  >
+      <div className="minni card" style={{width: "18rem",maxHeight:"350px",backgroundColor:"black",color:"white",borderColor:"white"} }>
+  <img className="minni1 card-img-top" src={props.imgSrc} style={{height:"40%",objectFit:"fill"}}  alt="..."/>
+   <div className='card-f'>
+  <div className="ball card-body"  >
     <h5 className="card-title">{props.foodname}</h5>
   </div>
 <div className="quantity" style={{maxHeight:"30%"}}>
-<select className="m-2 h-100 w-20 text-black rounded"  onChange={(e)=> setQty(e.target.value)}>
+<select className="numberss m-2  rounded"   onChange={(e)=> setQty(e.target.value)}>
               {Array.from(Array(6), (e, i) => {
                 return (
-                  <option key={i + 1} value={i + 1}>{i + 1}</option>)
+                  <option className='number3' key={i + 1} value={i + 1}>{i + 1}  </option>)
               })}
             </select>
 
-<select className="m-2 h-80 w-20  text-black rounded" ref={priceRef} onChange={(e)=> setSize(e.target.value)}  >
+<select className="numbers  rounded" ref={priceRef} onChange={(e)=> setSize(e.target.value)}  >
 {priceOptions.map((data) => {
-                return <option key={data} value={data}>{data}</option>
+                return <option className='number3' key={data} value={data}>{data}</option>
               })}
             </select>
             </div>
-   <div className='d-inline h-80 fs-5'>
+   <div className='pricing2  d-inline ' style={{fontSize:"20px"}}>
    ₹{finalPrice}
    </div>
   
-   <hr>
-   </hr>
-   <div className='d-flex justify-content-center'><button className='btn1' onClick={AddtoCart}>Add to Cart</button></div>
+  <div className='line' style={{height:'0.5px',width:'100%',backgroundColor:'white'}}></div>
+   <div className='button-add d-flex justify-content-center'><button className='btn1 ' style={{marginTop:'15px'}} onClick={AddtoCart}>Add to Cart</button></div>
 </div>
     </div>
   )

@@ -35,12 +35,12 @@ export default function Home() {
               .map(filteritems=>{
                 return(
                  
-                  <div className='col-12 col-md-6 col-lg-3 m-4 d-inline-flex' style={{gap:"50px"}} >
+                  <div className='tawa col-12 col-md-6 col-lg-3 m-4 d-inline-flex' style={{gap:"50px"}} >
                     <Cards 
                     key={filteritems._id}
                     FoodItem={filteritems}
                     foodname={filteritems.name}
-                    options={filteritems.options[0]}
+                    options= {filteritems.options[0]}
                     
                     imgSrc={filteritems.img}
                     ></Cards>

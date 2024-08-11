@@ -15,7 +15,7 @@ export default function Navbar() {
   }
  
   return (
-    <div style={{height:"90px"}}>
+    <div className='main-nav' style={{height:"90px"}}>
       <nav className="navbar navbar-dark  navbar-expand-md bg-black text-white "style={{zIndex:"1"}}> 
   <div className="container-fluid">
     <div className='mt-2' >
@@ -27,7 +27,7 @@ export default function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul  className="navbar-nav me-auto mb-2 mb-lg-0">
         <li style={{zIndex:"1"}} className="nav-item">
-          <Link className="nav-link active mt-2" style={{color:"white",fontFamily:"poppins",fontSize:"125%"}} aria-current="page" to="/">Home </Link>
+          <Link className="home nav-link active mt-2" style={{color:"white",fontFamily:"poppins",fontSize:"125%",borderWidth:'20px'}} aria-current="page" to="/">Home </Link>
         </li>
 
        { (localStorage.getItem("authtoken"))?
