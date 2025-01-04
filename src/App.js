@@ -13,6 +13,7 @@ import {
 import Signup from './Components/Signup';
 import { CartProvider } from './Components/ContextReducer';
 import MyOrder from './Components/MyOrders';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
      
 
      </Routes>
-     
+     <Toaster/>
      </Router>
      </CartProvider>
     </div>

@@ -31,7 +31,7 @@ export default function Login() {
     })
 }
   return (
-    <div>
+    <div className='seen'>
    <div className='outside-login'>
 
     <div className="container6">
@@ -62,7 +62,7 @@ export default function Login() {
         <input type="submit" value="Login Now" />
       </div>
       <div className="links mt-10">
-        <Link to="/createuser" style={{  color: " #00d5ff",marginTop:"10px"}}>Create an Account</Link>
+        <Link to="/createuser" style={{  color: " #00d5ff",marginTop:"10px"}}> New User? Create an Account</Link>
       </div>
     </form>
   </div>

@@ -4,6 +4,7 @@ import logo from '../images/Logo.jpg'
 import Modal from '../Modal';
 import Cart from './Cart';
 import { useCart } from './ContextReducer';
+import './index.css'
 
 export default function Navbar() {
   let data=useCart();
@@ -15,8 +16,8 @@ export default function Navbar() {
   }
  
   return (
-    <div className='main-nav' style={{height:"90px"}}>
-      <nav className="navbar navbar-dark  navbar-expand-md bg-black text-white "style={{zIndex:"1"}}> 
+
+      <nav className="navbar  navbar-dark  navbar-expand-md bg-black text-white fixed-top "> 
   <div className="container-fluid">
     <div className='mt-2' >
     <img src={logo} style={{height:"80px",width:"125px",objectFit:"fill"}} alt="" />
@@ -44,7 +45,7 @@ export default function Navbar() {
       </div>
       : <div className='d-flex justify-content-center  '>
        <d iv className=' btn mx-2 '
-        onClick={()=>{setCartView(true)}} style={{color:"white",fontFamily:"poppins",fontSize:"125%"}} >My Cart <span class="badge text-bg-secondary">{data.length}</span>
+        onClick={()=>{setCartView(true)}} style={{color:"white",fontFamily:"poppins",fontSize:"125%"}} >My Cart <span className="badge text-bg-secondary">{data.length}</span>
       </d>
       {cartView ? <Modal  onClose={() => setCartView(false)}><Cart></Cart></Modal> : ""}
      <div className=' btn mx-3' style={{color:"white",fontFamily:"poppins",fontSize:"125%"}}onClick={logout}>LogOut </div>
@@ -55,7 +56,6 @@ export default function Navbar() {
   </div>
 
 </nav>
-    </div>
     
   )
 }

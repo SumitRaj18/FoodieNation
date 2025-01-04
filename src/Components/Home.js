@@ -21,7 +21,7 @@ export default function Home() {
       loadData()
     },[])
   return (
-    <div className=' mb-3'>
+    <div className='jan'>
       <Slides />
       <div className="containerhome">
         {

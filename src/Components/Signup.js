@@ -27,7 +27,7 @@ function Signup() {
           })
   }
   return (
-    <div>
+    <div className='seen'>
     <div className='outside-signup'>
 
     <div className="container5">

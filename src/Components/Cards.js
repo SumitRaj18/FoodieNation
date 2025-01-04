@@ -1,6 +1,7 @@
 import React, { useState,useEffect,useRef} from 'react'
 import { useDispatchCart,useCart } from './ContextReducer'
 import'./index.css'
+import toast from 'react-hot-toast';
 export default function Cards(props) {
   let dispatch = useDispatchCart();
   let data=useCart()
@@ -27,6 +28,8 @@ export default function Cards(props) {
       else if (food.size !== size) {
         await dispatch({ type: "ADD", id: props.FoodItem._id, name: props.FoodItem.name, price: finalPrice, qty: qty, size: size,img: props.ImgSrc })
         console.log("Size different so simply ADD one more to the list")
+        toast.success("Added to Cart")
+
         return
       }
       return
